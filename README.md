@@ -53,7 +53,7 @@ The program then randomly selects characters until the generated password:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Password-Generator.git
+git clone https://github.com/shweshd/Password-Generator.git
 ```
 
 ### 2. Navigate to the project
@@ -65,7 +65,7 @@ cd Password-Generator
 ### 3. Run the program
 
 ```bash
-python password_generator.py
+python main.py
 ```
 
 ## 💻 Example
