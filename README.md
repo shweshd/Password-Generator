@@ -36,7 +36,7 @@ No external packages are required.
 ```text
 Password-Generator/
 │
-├── password_generator.py
+├── main.py
 └── README.md
 ```
 
