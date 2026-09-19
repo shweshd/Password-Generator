@@ -1,29 +1,35 @@
 # 🔐 Password Generator
 
-A simple Python-based password generator that creates random and secure passwords based on the user's requirements.
+A simple **Python password generator** that creates customizable random passwords based on the user's requirements.
 
-The user can choose:
-- Minimum password length
-- Whether to include numbers
-- Whether to include special characters
+The program allows users to choose a minimum password length and optionally include **numbers** and **special characters**.
 
-## 🚀 Features
+> ⚠️ **Learning Project:** This project uses Python's `random` module to demonstrate password-generation logic. For passwords that require strong security, use Python's `secrets` module instead.
 
-- Generates random passwords automatically
-- Supports uppercase and lowercase letters
-- Optional numbers
-- Optional special characters
-- User-defined minimum password length
-- Simple command-line interface
-- Built using Python's built-in libraries
+---
+
+## ✨ Features
+
+* 🔑 Generates random passwords automatically
+* 🔠 Includes uppercase and lowercase letters
+* 🔢 Optional numbers
+* 🔣 Optional special characters
+* 📏 User-defined minimum password length
+* 💻 Simple command-line interface
+* 📦 Uses only Python's built-in libraries
+* 🚫 No external dependencies required
+
+---
 
 ## 🛠️ Technologies Used
 
-- **Python 3**
-- `random` module
-- `string` module
+* **Python 3**
+* `random` — randomly selects characters
+* `string` — provides predefined character sets
 
 No external packages are required.
+
+---
 
 ## 📁 Project Structure
 
@@ -34,19 +40,57 @@ Password-Generator/
 └── README.md
 ```
 
+---
+
 ## ⚙️ How It Works
 
-The program uses Python's `string` module to create character sets:
+The program builds a character pool using Python's `string` module.
 
-* `string.ascii_letters` → uppercase and lowercase letters
-* `string.digits` → numbers from 0–9
-* `string.punctuation` → special characters
+### Character sets
 
-The program then randomly selects characters until the generated password:
+```python
+string.ascii_letters
+```
 
-1. Reaches the requested minimum length.
-2. Contains a number if the user requested numbers.
-3. Contains a special character if the user requested special characters.
+Contains uppercase and lowercase letters:
+
+```text
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+```python
+string.digits
+```
+
+Contains numbers:
+
+```text
+0123456789
+```
+
+```python
+string.punctuation
+```
+
+Contains special characters such as:
+
+```text
+! @ # $ % ^ & * ...
+```
+
+### Password generation process
+
+The program:
+
+1. Asks the user for the minimum password length.
+2. Asks whether numbers should be included.
+3. Asks whether special characters should be included.
+4. Builds the appropriate character set.
+5. Randomly selects characters.
+6. Ensures the requested character requirements are satisfied.
+7. Displays the generated password.
+
+---
 
 ## ▶️ How to Run
 
@@ -56,7 +100,7 @@ The program then randomly selects characters until the generated password:
 git clone https://github.com/shweshd/Password-Generator.git
 ```
 
-### 2. Navigate to the project
+### 2. Navigate to the project directory
 
 ```bash
 cd Password-Generator
@@ -65,8 +109,10 @@ cd Password-Generator
 ### 3. Run the program
 
 ```bash
-python main.py
+python password_generator.py
 ```
+
+---
 
 ## 💻 Example
 
@@ -75,14 +121,16 @@ Enter the minimum length: 12
 Do you want to have numbers (Y/N)? y
 Do you want to have special characters (Y/N)? y
 
-The generated password is:  aK7@pL2#xQ9!
+The generated password is: aK7@pL2#xQ9!
 ```
 
 The generated password will be different each time because the program randomly selects characters.
 
+---
+
 ## 📚 Concepts Practiced
 
-This project helped practice several fundamental Python concepts:
+This project helped me practice fundamental Python concepts, including:
 
 * Functions
 * Function parameters
@@ -93,26 +141,55 @@ This project helped practice several fundamental Python concepts:
 * String manipulation
 * Python modules
 * Random character generation
+* Character sets
 * Basic program logic
+* Input validation
+
+---
 
 ## 🔮 Future Improvements
 
 Possible improvements for future versions:
 
-* Add a maximum password length
-* Add a graphical user interface (GUI)
-* Add password strength indicators
-* Allow users to exclude specific characters
-* Generate multiple passwords at once
-* Copy the generated password directly to the clipboard
-* Use Python's `secrets` module for stronger password generation
+* [ ] Add a maximum password length
+* [ ] Add a graphical user interface (GUI)
+* [ ] Add a password strength indicator
+* [ ] Allow users to exclude specific characters
+* [ ] Generate multiple passwords at once
+* [ ] Add a copy-to-clipboard option
+* [ ] Replace `random` with Python's `secrets` module
+* [ ] Add customizable character sets
+* [ ] Add command-line arguments for faster generation
 
-## ⚠️ Security Note
+---
 
-This project is intended primarily for learning Python programming.
+## 🔐 Security Note
 
-For passwords that require strong security, Python's `secrets` module is preferable to the `random` module because `secrets` is designed for security-sensitive random values.
+This project is primarily intended for **learning Python and understanding password-generation logic**.
+
+The current implementation uses Python's `random` module, which is **not designed for security-sensitive applications**.
+
+For real-world password generation, Python's `secrets` module should be used because it is specifically designed for generating cryptographically strong random values.
+
+For example:
+
+```python
+import secrets
+```
+
+This project may be upgraded to use `secrets` in a future version.
+
+---
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+This project is open source and available under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Shwesh Dubey**
+
+* GitHub: [@shweshd](https://github.com/shweshd)
+* Portfolio: [shweshd.github.io/Portfolio](https://shweshd.github.io/Portfolio/)
