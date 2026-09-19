@@ -109,7 +109,7 @@ cd Password-Generator
 ### 3. Run the program
 
 ```bash
-python password_generator.py
+python main.py
 ```
 
 ---
